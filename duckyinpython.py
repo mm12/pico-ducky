@@ -4,7 +4,7 @@
 # Modified by mm12, @_Catt0s
 
 # mode list: 
- # setup pin gp28, 
+ # setup pin gp22, 
  # usb disable 16
 # bit0 = GPIO02 to GND
 # bit1 = GPIO06 to GND
@@ -124,7 +124,8 @@ led.value = True
 def getProgrammingStatus():
     # check GP27 for setup mode
     # see setup mode for instructions
-    progStatusPin = digitalio.DigitalInOut(GP28)
+    progStatusPin = digitalio.DigitalInOut(GP22
+                                          )
     progStatusPin.switch_to_input(pull=digitalio.Pull.UP)
     progStatus = not progStatusPin.value
     return(progStatus)
