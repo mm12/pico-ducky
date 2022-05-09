@@ -5,7 +5,7 @@
 
 # mode list: 
  # setup pin gp28, 
- # usb disable 15 
+ # usb disable 16
 # bit0 = GPIO02 to GND
 # bit1 = GPIO06 to GND
 # bit3 = GPIO10 to GND
