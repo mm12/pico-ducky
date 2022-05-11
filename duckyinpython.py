@@ -9,7 +9,7 @@
 # bit0 = GPIO02 to GND
 # bit1 = GPIO06 to GND
 # bit3 = GPIO10 to GND
-# bit4 = GPIO14 to GND   
+# bit4 = GPIO15 to GND   
 
 import usb_hid
 from adafruit_hid.keyboard import Keyboard
@@ -156,7 +156,7 @@ def selectPayload():
     # bit0 = GPIO02 to GND
     # bit1 = GPIO06 to GND
     # bit3 = GPIO10 to GND
-    # bit4 = GPIO14 to GND
+    # bit4 = GPIO15 to GND
     payload1Pin = digitalio.DigitalInOut(GP2)
     payload1Pin.switch_to_input(pull=digitalio.Pull.UP)
     bits[0] = not payload1Pin.value
@@ -166,7 +166,7 @@ def selectPayload():
     payload3Pin = digitalio.DigitalInOut(GP10)
     payload3Pin.switch_to_input(pull=digitalio.Pull.UP)
     bits[2] = not payload3Pin.value
-    payload4Pin = digitalio.DigitalInOut(GP14)
+    payload4Pin = digitalio.DigitalInOut(GP15)
     payload4Pin.switch_to_input(pull=digitalio.Pull.UP)
     bits[3] = not payload4Pin.value
 
